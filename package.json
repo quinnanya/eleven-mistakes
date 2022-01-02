@@ -1,0 +1,44 @@
+{
+  "name": "eleven-mistakes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --include-path=./node_modules src/scss/style.scss src/assets/css/style.css",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run sass -- --watch",
+    "start": "npm-run-all sass --parallel watch:*",
+    "build": "npm run sass -- --output-style=compressed && eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "autoprefixer": "^10.4.1",
+    "bootstrap": "^4.6.0",
+    "eleventy-plugin-reading-time": "0.0.1",
+    "eleventy-plugin-toc": "^1.1.0",
+    "markdown-it": "^12.1.0",
+    "markdown-it-anchor": "^8.1.0",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-fontawesome": "^0.3.0",
+    "markdown-it-footnote": "^3.0.3",
+    "moment": "^2.29.1",
+    "postcss": "^8.4.5",
+    "sass": "^1.35.1",
+    "slugify": "^1.5.3"
+  },
+  "devDependencies": {
+    "eleventy-load": "^0.2.1",
+    "eleventy-load-css": "^0.3.0",
+    "eleventy-load-file": "^0.1.0",
+    "eleventy-load-html": "^0.1.1",
+    "eleventy-load-sass": "^0.1.2",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
